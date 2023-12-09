@@ -16,7 +16,7 @@ setup(
     long_description = long_description,
     long_description_content_type = "text/markdown",
     url = 'https://github.com/codebreaker343/ecs-rollback',
-    py_modules = ['ecs-rollback', 'app'],
+    py_modules = ['ecs_rollback'],
     packages = find_packages(),
     install_requires = [requirements],
     python_requires='>=3.10',
@@ -24,8 +24,5 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Operating System :: OS Independent",
     ],
-    entry_points = '''
-        [console_scripts]
-        ecs-rollback=ecs-rollback:cli
-    '''
+    entry_points={"console_scripts": ["ecs-rollback=ecs_rollback:cli"]},
 )
